@@ -70,7 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/Gtk2/GLExt
 %{perl_vendorarch}/Gtk2/GLExt/Install
 %dir %{perl_vendorarch}/auto/Gtk2/GLExt
-%{perl_vendorarch}/auto/Gtk2/GLExt/GLExt.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Gtk2/GLExt/GLExt.so
 %{_mandir}/man3/Gtk2::GLExt*.3pm*
 %{_mandir}/man3/Gtk2::Gdk::GLExt*.3pm*
