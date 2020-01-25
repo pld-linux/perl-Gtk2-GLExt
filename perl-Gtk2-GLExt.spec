@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (requires X server)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pnam	Gtk2-GLExt
 Summary:	Gtk2::GLExt - Perl interface to GtkGLExt library
 Summary(pl.UTF-8):	Gtk2::GLExt - perlowy interfejs do biblioteki GtkGLExt
