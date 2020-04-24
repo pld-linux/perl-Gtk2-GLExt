@@ -17,10 +17,11 @@ URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	gtkglext-devel >= 1.0
 BuildRequires:	perl-ExtUtils-Depends >= 0.2
 BuildRequires:	perl-ExtUtils-PkgConfig >= 1.03
-BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Glib >= 1.060
 BuildRequires:	perl-Gtk2 >= 1.060
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	gtkglext >= 1.0
 Requires:	perl-Glib >= 1.060
 Requires:	perl-Gtk2 >= 1.060
@@ -55,9 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/Gtk2/GLExt.pod
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/Gtk2/GLExt/*.pod
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/Gtk2/Gdk/GLExt/*.pod
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/Gtk2/GLExt.pod
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/Gtk2/GLExt/*.pod
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/Gtk2/Gdk/GLExt/*.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
